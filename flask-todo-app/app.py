@@ -11,7 +11,6 @@ app.config['SQLALCHEMY_DATABASE_URI'] = "sqlite:////" + DATABASE
 
 # to connect the app to RDS server
 # app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+mysqlconnector://{user}:{password}@{rds-url}:{port}/{db-name}'
-# delete this line after push
 db = SQLAlchemy(app)
 
 

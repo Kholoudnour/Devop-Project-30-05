@@ -40,30 +40,8 @@
 
             {% for todo in todo_list %}
                 <tr>
-                    <th scope="row">{{ docker}}</th>
-                    <td>{{ container }}</td>
-                    {% if todo.complete == False %}
-                        <td><span class="badge badge-danger">Not Complete</span></td>
-                    {% else %}
-                        <td><span class="badge badge-success">Completed</span></td>
-                    {% endif %}
-                    <td><a href="/complete/{{ todo.id }}" class="btn btn-info">Update</a></td>
-                    <td><a href="/delete/{{ todo.id }}" class="btn btn-danger">Delete</a></td>
-                </tr>
-                <tr>
-                    <th scope="row">{{ AWS }}</th>
-                    <td>{{ ECR }}</td>
-                    {% if todo.complete == False %}
-                        <td><span class="badge badge-danger">Not Complete</span></td>
-                    {% else %}
-                        <td><span class="badge badge-success">Completed</span></td>
-                    {% endif %}
-                    <td><a href="/complete/{{ todo.id }}" class="btn btn-info">Update</a></td>
-                    <td><a href="/delete/{{ todo.id }}" class="btn btn-danger">Delete</a></td>
-                </tr>
-                <tr>
-                    <th scope="row">{{ CICD }}</th>
-                    <td>{{ CircleCi }}</td>
+                    <th scope="row">{{ todo.id }}</th>
+                    <td>{{ todo.title }}</td>
                     {% if todo.complete == False %}
                         <td><span class="badge badge-danger">Not Complete</span></td>
                     {% else %}
